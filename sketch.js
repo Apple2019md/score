@@ -117,6 +117,11 @@ function draw() {
   textSize(30);
   text("Score : " + score, 1000, 100);
 
+  if(numberOfArrows == 0){
+    gameOver();
+  }
+
+
 
   if (numberOfArrows == 0) {
     console.log("arrow bucket is empty")
@@ -149,13 +154,8 @@ function keyReleased() {
   }
 }
 
-fuction gameOver()
+function gameOver()
 {
-
-  if(numberOfArrows == 0){
-    gameOver();
-  }
-
   swal(
   {
      title: "GAMEOVER!!!",
